@@ -181,6 +181,9 @@ visible through `telecrawl contacts`. `--fetch-media` also uses the existing
 native Telegram session to fetch missing cloud media when account auth data is
 present; this does not launch Telegram or start a login/2FA flow.
 
+Native Postbox messages with a thread ID preserve their author, flags, tags, and
+text. Reimport affected chats to refresh messages decoded by older versions.
+
 Useful reads:
 
 ```bash
