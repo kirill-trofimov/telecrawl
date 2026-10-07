@@ -4,7 +4,8 @@
 
 ### Fixed
 
-- Finish forum topic loading when a page brings no new topics after the advertised count is reached, instead of failing the whole Telegram Desktop import with "pagination stalled after 7 of 6 topics". Thanks @kirill-trofimov.
+- Read the native Postbox `threadId` as a single Int64, so messages in chats with threads keep their author, flags, tags and type instead of being decoded from a shifted offset. Thanks @kirill-trofimov.
+- Finish forum topic loading on duplicate-only pages after the advertised count is reached, while still rejecting incomplete or cycling pagination that adds topics. (#56) Thanks @kirill-trofimov.
 
 ## 0.5.0 - 2026-10-01
 
